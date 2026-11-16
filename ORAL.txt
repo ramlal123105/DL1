@@ -1,0 +1,2064 @@
+Bro, here is **Part 2 – 100+ additional Deep Learning Lab Viva Questions with Answers**. These include basic concepts, technical definitions, differences, algorithms, Python libraries and questions examiners can ask about your practical implementation.
+
+# **Practical 1: Deep Learning Packages – Additional Viva**
+
+**1. What is Python?**\
+Python is a high-level, interpreted programming language used for AI, ML and Deep Learning.
+
+**2. Why is Python used in Deep Learning?**\
+Because it has simple syntax and powerful libraries for mathematical computations and neural networks.
+
+**3. What is a Framework?**\
+A framework is a collection of tools and libraries used to develop applications.
+
+**4. What is an Open-Source Software?**\
+Software whose source code is publicly available for use and modification under its license.
+
+**5. What is NumPy?**\
+NumPy is a Python library used for numerical calculations and multidimensional arrays.
+
+**6. What is Pandas?**\
+Pandas is a Python library used for data manipulation and analysis.
+
+**7. What is Matplotlib?**\
+It is a Python library used for creating graphs and visualizations.
+
+**8. What is Scikit-learn?**\
+It is a Python library used for traditional machine learning algorithms.
+
+**9. What is CUDA?**\
+CUDA is a parallel computing platform developed by NVIDIA that allows compatible GPUs to perform computations.
+
+**10. What is Automatic Differentiation?**\
+It is a technique used to automatically calculate derivatives of mathematical functions.
+
+**11. What is a Computation Graph?**\
+It is a graphical representation of mathematical operations and their dependencies.
+
+**12. What is an API?**\
+API stands for Application Programming Interface. It allows different software components to communicate.
+
+**13. What is Model Training?**\
+It is the process of adjusting model parameters using training data.
+
+**14. What is Model Deployment?**\
+It is the process of making a trained model available for real-world use.
+
+**15. What is the difference between TensorFlow and PyTorch?**
+
+| TensorFlow                       | PyTorch                            |
+| -------------------------------- | ---------------------------------- |
+| Developed by Google              | Developed by Meta                  |
+| Uses TensorFlow execution system | Uses dynamic computation graphs    |
+| Supports Keras API               | Provides torch.nn                  |
+| Used in production and research  | Popular in research and production |
+
+# **Practical 2: Feed Forward Neural Network – Additional Viva**
+
+**16. What is Perceptron?**\
+A perceptron is the simplest artificial neuron used for binary classification.
+
+**17. What is a Multi-Layer Perceptron (MLP)?**\
+It is a neural network containing an input layer, one or more hidden layers and an output layer.
+
+**18. What is Forward Propagation?**\
+It is the process of passing input data through the network to generate output.
+
+**19. What is Gradient Descent?**\
+It is an optimization algorithm used to minimize the loss function.
+
+**20. What is an Optimizer?**\
+It is an algorithm that updates weights and biases to reduce prediction error.
+
+**21. Name different optimizers.**\
+SGD, Adam, RMSprop and Adagrad.
+
+**22. What is Adam Optimizer?**\
+Adam is an optimization algorithm that uses adaptive learning rates and moving averages of gradients.
+
+**23. What is Binary Classification?**\
+It is the process of classifying data into two categories.
+
+**24. What is Multiclass Classification?**\
+It is the process of classifying data into more than two categories.
+
+**25. What is Categorical Cross-Entropy?**\
+It is a loss function commonly used for multiclass classification.
+
+**26. What is Mean Squared Error (MSE)?**\
+It is the average of squared differences between actual and predicted values.
+
+**27. What is an Iteration?**\
+One update of model parameters using a batch of training data.
+
+**28. What is Validation Data?**\
+It is data used to evaluate model performance during training.
+
+**29. What is Dropout?**\
+Dropout is a regularization technique that randomly disables some neurons during training to reduce overfitting.
+
+**30. What is Normalization?**\
+It is the process of scaling data into a common range.
+
+**31. What is the range of Sigmoid activation?**\
+0 to 1.
+
+**32. What is the range of Tanh activation?**\
+-1 to +1.
+
+**33. What is the full form of ReLU?**\
+Rectified Linear Unit.
+
+**34. What is the purpose of an Output Layer?**\
+It generates the final prediction of the neural network.
+
+**35. What is a Hyperparameter?**\
+A parameter set before training, such as learning rate, batch size and number of epochs.
+
+# **Practical 3: CNN – Additional Viva**
+
+**36. What is Computer Vision?**\
+Computer Vision is a field of AI that enables computers to understand images and videos.
+
+**37. What is a Kernel in CNN?**\
+A kernel is a small matrix used to extract features from an image.
+
+**38. What is Stride?**\
+Stride is the number of pixels by which a filter moves over an image.
+
+**39. What is Padding?**\
+Padding adds extra pixels around an image to control feature map dimensions.
+
+**40. What are the types of Padding?**\
+Valid padding and Same padding.
+
+**41. What is Same Padding?**\
+It adds padding to maintain the spatial dimensions of the output, subject to stride and rounding.
+
+**42. What is Valid Padding?**\
+It performs convolution without adding extra padding.
+
+**43. What is a Feature Extraction?**\
+It is the process of identifying useful information such as edges, shapes and textures from images.
+
+**44. What is Max Pooling?**\
+It selects the maximum value from a particular region of the feature map.
+
+**45. What is Average Pooling?**\
+It calculates the average value of a particular region.
+
+**46. Why is Pooling important?**\
+It reduces feature map dimensions and computational requirements.
+
+**47. What is Image Augmentation?**\
+It creates modified versions of existing images through rotation, flipping, cropping and other transformations.
+
+**48. Why is Image Augmentation used?**\
+It increases training data diversity and helps reduce overfitting.
+
+**49. What is RGB?**\
+RGB stands for Red, Green and Blue, the three color channels commonly used in digital images.
+
+**50. What is a Grayscale Image?**\
+An image containing different shades of gray rather than separate color channels.
+
+**51. What is the difference between CNN and RNN?**\
+CNN is commonly used for image and spatial data, while RNN is designed to process sequential data.
+
+**52. What is Kernel Size?**\
+It is the height and width of a convolution filter, such as 3 × 3.
+
+**53. What is Overfitting in CNN?**\
+It occurs when the CNN learns training images too specifically and performs poorly on new images.
+
+**54. What is Transfer Learning in CNN?**\
+It reuses a CNN model trained on a large dataset for another related task.
+
+**55. What is a Channel in an Image?**\
+A channel represents one component of image data, such as Red, Green or Blue.
+
+# **Practical 4: Autoencoder – Additional Viva**
+
+**56. What is Unsupervised Learning?**\
+It is a type of machine learning that learns patterns from data without requiring labeled outputs.
+
+**57. What is Data Compression?**\
+It is the process of reducing data size while retaining important information.
+
+**58. What is Dimensionality Reduction?**\
+It reduces the number of features in a dataset while preserving useful information.
+
+**59. What is Latent Space?**\
+It is a compressed representation of input data learned by a neural network.
+
+**60. What is Latent Representation?**\
+It is the encoded information stored in the latent space.
+
+**61. What is Reconstruction?**\
+It is the process of generating the original input from encoded information.
+
+**62. Which loss function is used in Autoencoders?**\
+Mean Squared Error (MSE) and Binary Cross-Entropy are commonly used, depending on the data.
+
+**63. What happens if the reconstruction error is high?**\
+It may indicate that the input is different from the patterns learned during training.
+
+**64. What is a Denoising Autoencoder?**\
+It is an Autoencoder trained to reconstruct clean data from noisy input.
+
+**65. What is a Sparse Autoencoder?**\
+It is an Autoencoder that encourages only a small number of neurons to activate.
+
+**66. What is a Variational Autoencoder (VAE)?**\
+It is a generative model that learns a probability distribution in latent space.
+
+**67. What is the main purpose of an Autoencoder?**\
+To learn compressed data representations and reconstruct input data.
+
+**68. Can Autoencoders be used for image denoising?**\
+Yes, they can remove noise from images by learning to reconstruct clean images.
+
+**69. What is an Anomaly Score?**\
+It is a numerical value representing how unusual a data sample is.
+
+**70. Give one real-life example of anomaly detection.**\
+Detecting unusual credit card transactions to identify possible fraud.
+
+# **Practical 5: CBOW – Additional Viva**
+
+**71. What is a Corpus?**\
+A corpus is a large collection of text used for language processing.
+
+**72. What is Tokenization?**\
+It is the process of splitting text into smaller units called tokens.
+
+**73. What is a Token?**\
+A token is a unit of text, such as a word, character or subword.
+
+**74. What is Stop Word Removal?**\
+It is the process of removing common words that may carry little useful information for a particular NLP task.
+
+**75. What is Stemming?**\
+It reduces words to their root or stem form.
+
+**76. What is Lemmatization?**\
+It converts words into their meaningful dictionary base form.
+
+**77. What is a Word Vector?**\
+It is a numerical representation of a word in a multidimensional space.
+
+**78. What is Context Window?**\
+It defines how many surrounding words are considered when predicting a target word.
+
+**79. What is the CBOW objective?**\
+To predict a target word using its surrounding context words.
+
+**80. What is the Skip-Gram objective?**\
+To predict surrounding context words using a target word.
+
+**81. What is Semantic Similarity?**\
+It measures how similar two words are in meaning.
+
+**82. What is Cosine Similarity?**\
+It measures the similarity between two vectors using the cosine of the angle between them.
+
+**83. What is an Embedding Dimension?**\
+It is the number of numerical values used to represent a word vector.
+
+**84. What is One-Hot Vector?**\
+It is a vector with one value as 1 and all other values as 0.
+
+**85. Why are Word Embeddings better than One-Hot Encoding?**\
+Word embeddings can represent semantic relationships, while one-hot encoding treats words as separate categories.
+
+# **Practical 6: Transfer Learning and Object Detection – Additional Viva**
+
+**86. What is ImageNet?**\
+ImageNet is a large image dataset commonly used for training and evaluating image recognition models.
+
+**87. What is Feature Extraction in Transfer Learning?**\
+It uses the learned features of a pre-trained model without updating its existing weights.
+
+**88. What is Fine-Tuning?**\
+It involves unfreezing some or all pre-trained layers and training them further on a new dataset.
+
+**89. What is a Frozen Layer?**\
+It is a model layer whose weights are not updated during training.
+
+**90. What is SSD?**\
+SSD stands for Single Shot MultiBox Detector. It is an object detection algorithm.
+
+**91. What is YOLO?**\
+YOLO stands for You Only Look Once. It is a real-time object detection algorithm.
+
+**92. What is R-CNN?**\
+R-CNN stands for Region-based Convolutional Neural Network. It detects objects using region proposals.
+
+**93. What is Non-Maximum Suppression (NMS)?**\
+It removes duplicate overlapping bounding boxes and keeps the most relevant detections.
+
+**94. What is Intersection over Union (IoU)?**\
+It measures the overlap between predicted and ground-truth bounding boxes.
+
+**95. What is Precision in Object Detection?**\
+It measures the proportion of predicted positive detections that are correct.
+
+**96. What is Recall?**\
+It measures the proportion of actual objects that are successfully detected.
+
+**97. What is mAP?**\
+Mean Average Precision is a metric used to evaluate object detection performance across classes.
+
+**98. What is Real-Time Object Detection?**\
+It is detecting and locating objects quickly as images or video frames arrive.
+
+**99. What is Classification Accuracy?**\
+It is the ratio of correct predictions to total predictions.
+
+**100. What is the difference between Detection and Recognition?**\
+Detection finds the objects and their locations, while recognition identifies what the objects are.
+
+# **Extra: Python and Practical Implementation Viva**
+
+These are particularly important because your examiner may ask you about the code you performed.
+
+| Question                               | Answer                                                                |
+| -------------------------------------- | --------------------------------------------------------------------- |
+| 101. What is `import` in Python?       | It is used to include a module or library.                            |
+| 102. What is `pip`?                    | Python package installer.                                             |
+| 103. What is `pip install tensorflow`? | Command to install TensorFlow.                                        |
+| 104. What is `Sequential()`?           | It creates a sequential neural network model in Keras.                |
+| 105. What is `Dense()`?                | It creates a fully connected neural network layer.                    |
+| 106. What is `Flatten()`?              | It converts multidimensional data into a 1D vector.                   |
+| 107. What is `Conv2D()`?               | It creates a 2D convolution layer.                                    |
+| 108. What is `MaxPooling2D()`?         | It creates a 2D max pooling layer.                                    |
+| 109. What is `model.compile()`?        | It configures the model with optimizer, loss and metrics.             |
+| 110. What is `model.fit()`?            | It trains the model using input data.                                 |
+| 111. What is `model.predict()`?        | It generates predictions using the trained model.                     |
+| 112. What is `model.evaluate()`?       | It evaluates model performance on test data.                          |
+| 113. What is `epochs`?                 | Number of complete passes through training data.                      |
+| 114. What is `batch_size`?             | Number of samples processed in one training batch.                    |
+| 115. What is `activation='relu'`?      | It applies ReLU activation to a layer.                                |
+| 116. What is `optimizer='adam'`?       | It selects Adam as the optimization algorithm.                        |
+| 117. What is `loss`?                   | It specifies the function used to measure prediction error.           |
+| 118. What is `metrics=['accuracy']`?   | It tells the model to report accuracy during training and evaluation. |
+| 119. What is `Sequential API`?         | It builds models by stacking layers one after another.                |
+| 120. What is `Dataset`?                | An organized collection of data used for training and testing.        |
+
+## **Top 20 tricky viva questions**
+
+These are slightly more conceptual. Learn these after the basic questions.
+
+| Question                                           | Short answer                                                                           |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| 1. Can DL work without ML?                         | No, DL is a subset of ML.                                                              |
+| 2. Can CNN work on text?                           | Yes, 1D CNNs can process text sequences.                                               |
+| 3. Is CNN supervised learning?                     | It is commonly trained using supervised learning.                                      |
+| 4. Does an Autoencoder need labeled data?          | Generally, no.                                                                         |
+| 5. Can an Autoencoder generate images?             | Yes, especially generative variants like VAE.                                          |
+| 6. Is CBOW a classification model?                 | It predicts a word from context, typically using a vocabulary-level softmax objective. |
+| 7. Is Word2Vec a neural network?                   | Yes, it is based on shallow neural network architectures.                              |
+| 8. Can Transfer Learning work with small datasets? | Yes, it is especially useful when labeled data is limited.                             |
+| 9. Is VGG16 a pre-trained model?                   | Yes, it can be used with pre-trained weights.                                          |
+| 10. What is vanishing gradient?                    | Gradients become extremely small during backpropagation.                               |
+| 11. What is exploding gradient?                    | Gradients become extremely large during training.                                      |
+| 12. What is Regularization?                        | A technique used to reduce overfitting.                                                |
+| 13. What is Generalization?                        | The ability of a model to perform well on unseen data.                                 |
+| 14. What is Batch Normalization?                   | A technique that normalizes layer activations during training.                         |
+| 15. What is Early Stopping?                        | It stops training when validation performance stops improving.                         |
+| 16. What is an Inference?                          | Using a trained model to make predictions.                                             |
+| 17. What is a Hyperparameter?                      | A setting chosen before or during model configuration.                                 |
+| 18. What is a Deep Neural Network?                 | A neural network with multiple hidden layers.                                          |
+| 19. What is Feature Map?                           | The output of a convolution operation.                                                 |
+| 20. What is the main limitation of Deep Learning?  | It often requires large datasets and high computational resources.                     |
+
+## **Final preparation: Test yourself**
+
+**Quick viva MCQ practice**
+
+0/8 answered
+
+**1. Which layer extracts features in CNN?**
+
+Flatten
+
+Convolution
+
+Output
+
+
+
+**2. Which model predicts a target word using context?**
+
+Skip-Gram
+
+CBOW
+
+CNN
+
+
+
+**3. Which part compresses data in an Autoencoder?**
+
+Encoder
+
+Decoder
+
+Output
+
+
+
+**4. What does IoU measure?**
+
+Training speed
+
+Bounding-box overlap
+
+Accuracy
+
+
+
+**5. Which command trains a Keras model?**
+
+model.predict()
+
+model.fit()
+
+model.compile()
+
+
+
+**6. What is one Epoch?**
+
+One sample
+
+One complete pass through training data
+
+One prediction
+
+
+
+**7. Which framework was developed by Google?**
+
+TensorFlow
+
+PyTorch
+
+Theano
+
+
+
+**8. What does YOLO stand for?**
+
+You Only Look Once
+
+Your Output Looks Optimal
+
+You Operate Layer Objects
+
+
+
+Check my answers
+
+**My advice:** Prepare Practical 2, 3 and 4 especially well. Understand the meaning of every layer, how the model works, and the purpose of the Python functions. Examiners often ask these things in lab vivas.
+
+
+BRO, this time I'll give you **practical-wise viva questions**, not general Deep Learning questions. These are focused on what the examiner can ask after checking each of your six practicals, including working, algorithms, datasets, Python functions and applications.
+
+# **LP-IV Deep Learning – Practical-wise Viva Questions**
+
+## **Practical 1: Study of Deep Learning Packages**
+
+25 Questions
+
+**Q1. What is the difference between a library and a framework?**\
+A library provides reusable functions, while a framework provides a structure for developing applications.
+
+**Q2. Which language is commonly used for Deep Learning?**\
+Python.
+
+**Q3. What is TensorFlow used for?**\
+It is used to build, train and deploy machine learning and deep learning models.
+
+**Q4. Which company developed TensorFlow?**\
+Google.
+
+**Q5. Which company developed PyTorch?**\
+Meta (originally developed by Facebook AI Research).
+
+**Q6. Is Keras a standalone deep learning framework?**\
+Keras is a high-level deep learning API, commonly used with TensorFlow.
+
+**Q7. What is the latest role of Keras?**\
+It provides a user-friendly interface for building and training neural networks.
+
+**Q8. What is Theano mainly used for?**\
+Mathematical computations and automatic differentiation. It is now discontinued as an actively maintained project.
+
+**Q9. Which library supports automatic differentiation?**\
+TensorFlow and PyTorch both support automatic differentiation.
+
+**Q10. What is a tensor?**\
+A tensor is a multidimensional array.
+
+**Q11. What is a scalar?**\
+A scalar is a single numerical value.
+
+**Q12. What is a vector?**\
+A vector is a one-dimensional array.
+
+**Q13. What is a matrix?**\
+A matrix is a two-dimensional array.
+
+**Q14. What is a GPU used for?**\
+It accelerates parallel computations during deep learning.
+
+**Q15. What is CPU?**\
+CPU stands for Central Processing Unit.
+
+**Q16. What is Jupyter Notebook?**\
+It is an interactive environment used to write and execute Python code.
+
+**Q17. What is Google Colab?**\
+It is an online platform provided by Google for executing Python and machine learning code.
+
+**Q18. What is pip?**\
+It is Python's package installation tool.
+
+**Q19. How do you install TensorFlow?**\
+Using `pip install tensorflow`.
+
+**Q20. How do you install PyTorch?**\
+Using the installation command provided on the official PyTorch website.
+
+**Q21. What is a Neural Network?**\
+A computational model inspired by biological neurons.
+
+**Q22. What is Deep Learning mainly used for?**\
+Image recognition, speech recognition, NLP and prediction.
+
+**Q23. What is an Activation Function?**\
+A function that determines the output of a neuron and introduces non-linearity.
+
+**Q24. What is Model Training?**\
+The process of learning weights and biases from training data.
+
+**Q25. Why are deep learning frameworks important?**\
+They simplify complex calculations and neural network implementation.
+
+## **Practical 2: Feed Forward Neural Network using MNIST**
+
+30 Questions
+
+**Q1. What is the objective of this practical?**\
+To implement a Feed Forward Neural Network for handwritten digit recognition.
+
+**Q2. What is MNIST?**\
+A dataset containing handwritten digit images from 0 to 9.
+
+**Q3. How many images are present in MNIST?**\
+70,000 images.
+
+**Q4. How is MNIST divided?**\
+60,000 training images and 10,000 testing images.
+
+**Q5. What is the dimension of each MNIST image?**\
+28 × 28 pixels.
+
+**Q6. What is the range of pixel values?**\
+0 to 255 before normalization.
+
+**Q7. Why do we normalize MNIST images?**\
+To scale pixel values, usually between 0 and 1, for easier model training.
+
+**Q8. How do we normalize pixel values?**\
+By dividing each pixel value by 255.
+
+**Q9. What is the input size of a flattened MNIST image?**\
+784 features (28 × 28).
+
+**Q10. Why do we flatten the image?**\
+To convert the 2D image into a 1D vector for a Dense layer.
+
+**Q11. What is a Dense Layer?**\
+A fully connected layer in which each neuron connects to all neurons in the previous layer.
+
+**Q12. What is the role of the hidden layer?**\
+It learns patterns and relationships from input data.
+
+**Q13. What is the role of the output layer?**\
+It predicts the digit class.
+
+**Q14. How many output neurons are required for MNIST classification?**\
+10 neurons, one for each digit.
+
+**Q15. Which activation function is commonly used in the hidden layer?**\
+ReLU.
+
+**Q16. Which activation function is commonly used in the output layer?**\
+Softmax.
+
+**Q17. Why is Softmax used?**\
+To convert output scores into class probabilities.
+
+**Q18. What is an Epoch?**\
+One complete pass through the training dataset.
+
+**Q19. What is Batch Size?**\
+The number of training samples processed before updating model parameters.
+
+**Q20. What is Backpropagation?**\
+It calculates gradients of the loss and propagates them backward to update weights.
+
+**Q21. What is Forward Propagation?**\
+It passes input through the network to calculate predictions.
+
+**Q22. Which optimizer is commonly used?**\
+Adam optimizer.
+
+**Q23. What is the purpose of Adam?**\
+To update weights efficiently using adaptive learning rates.
+
+**Q24. What is Sparse Categorical Cross-Entropy?**\
+A loss function used for multiclass classification when labels are given as integers.
+
+**Q25. What is Categorical Cross-Entropy?**\
+A multiclass classification loss function used when target labels are one-hot encoded.
+
+**Q26. What is Accuracy?**\
+The percentage of correctly classified samples.
+
+**Q27. What is Loss?**\
+A numerical measure of prediction error.
+
+**Q28. What is Overfitting?**\
+When the model performs well on training data but poorly on unseen data.
+
+**Q29. What is Underfitting?**\
+When the model fails to learn the important patterns in the data.
+
+**Q30. What is the final output of this practical?**\
+The predicted handwritten digit from 0 to 9.
+
+## **Practical 3: Image Classification using CNN**
+
+30 Questions
+
+**Q1. What is the aim of this practical?**\
+To classify images using a Convolutional Neural Network.
+
+**Q2. Why do we use CNN instead of a simple ANN for images?**\
+CNN automatically extracts spatial features from images and preserves their spatial relationships.
+
+**Q3. What is a Convolution Layer?**\
+A layer that applies filters to extract image features.
+
+**Q4. What is a Filter?**\
+A small matrix that detects specific patterns in an image.
+
+**Q5. What is a Kernel?**\
+Another name for the filter used in convolution.
+
+**Q6. What is a Feature Map?**\
+The output obtained after applying a convolution filter.
+
+**Q7. What features are extracted by CNN?**\
+Edges, corners, textures, shapes and complex patterns.
+
+**Q8. What is Stride?**\
+The number of pixels by which the filter moves each time.
+
+**Q9. What happens when stride increases?**\
+The output feature map generally becomes smaller.
+
+**Q10. What is Padding?**\
+Adding extra pixels around an image before convolution.
+
+**Q11. What is Zero Padding?**\
+Adding pixels with value zero around the image.
+
+**Q12. What is Max Pooling?**\
+Selecting the maximum value from a region of the feature map.
+
+**Q13. What is Average Pooling?**\
+Calculating the average value from a region.
+
+**Q14. What is the purpose of Pooling?**\
+To reduce spatial dimensions and computational requirements.
+
+**Q15. What is ReLU?**\
+An activation function defined as max(0,x).
+
+**Q16. What is Flatten?**\
+It converts feature maps into a one-dimensional vector.
+
+**Q17. What is the function of Fully Connected Layer?**\
+It uses extracted features to perform classification.
+
+**Q18. What is the difference between convolution and pooling?**\
+Convolution extracts features, while pooling reduces feature map dimensions.
+
+**Q19. What is Image Classification?**\
+Assigning an image to a particular category.
+
+**Q20. What is Data Augmentation?**\
+Creating modified training images using rotation, flipping, cropping, etc.
+
+**Q21. Why is Data Augmentation used?**\
+To increase data diversity and reduce overfitting.
+
+**Q22. What is RGB?**\
+Red, Green and Blue color channels.
+
+**Q23. How many channels does a grayscale image have?**\
+One channel.
+
+**Q24. What is the input shape of a color image?**\
+Height × Width × 3, for RGB images.
+
+**Q25. What is the input shape of a grayscale image?**\
+Height × Width × 1.
+
+**Q26. What is a CNN architecture?**\
+The arrangement of convolution, activation, pooling, flatten and classification layers.
+
+**Q27. What is a Feature Extraction Layer?**\
+A layer that learns useful representations from input images.
+
+**Q28. Can CNN perform object detection?**\
+Yes, CNN-based architectures are widely used for object detection.
+
+**Q29. What is the main advantage of CNN?**\
+Automatic feature extraction with fewer parameters than a fully connected network for many image tasks.
+
+**Q30. Give real-life applications of CNN.**\
+Face recognition, medical image analysis, image classification and self-driving cars.
+
+## **Practical 4: Anomaly Detection using Autoencoder**
+
+30 Questions
+
+**Q1. What is the aim of this practical?**\
+To detect abnormal data using an Autoencoder.
+
+**Q2. What type of neural network is an Autoencoder?**\
+An artificial neural network used for learning compressed representations and reconstruction.
+
+**Q3. What are the three main parts of an Autoencoder?**\
+Encoder, bottleneck and decoder.
+
+**Q4. What is the role of an Encoder?**\
+To compress input data into a lower-dimensional representation.
+
+**Q5. What is the role of a Decoder?**\
+To reconstruct the original input from compressed data.
+
+**Q6. What is a Bottleneck?**\
+The smallest or compressed representation in the Autoencoder.
+
+**Q7. Why is the bottleneck important?**\
+It forces the network to learn important information from the input.
+
+**Q8. What is Reconstruction Error?**\
+The difference between original input and reconstructed output.
+
+**Q9. Which loss function is commonly used?**\
+Mean Squared Error (MSE).
+
+**Q10. What is MSE?**\
+The average of squared differences between actual and predicted values.
+
+**Q11. What is Anomaly Detection?**\
+Finding unusual patterns that differ from normal data.
+
+**Q12. How does Autoencoder detect anomalies?**\
+It identifies samples with unusually high reconstruction error.
+
+**Q13. What is a Threshold?**\
+A selected error value used to distinguish normal and anomalous samples.
+
+**Q14. What happens when reconstruction error is below the threshold?**\
+The sample is generally classified as normal.
+
+**Q15. What happens when reconstruction error is above the threshold?**\
+The sample is flagged as anomalous.
+
+**Q16. On which data is an anomaly detection Autoencoder generally trained?**\
+Mostly on normal data.
+
+**Q17. Is an Autoencoder supervised or unsupervised?**\
+It is generally used for unsupervised learning.
+
+**Q18. What is Latent Space?**\
+The compressed feature representation learned by the Autoencoder.
+
+**Q19. What is Dimensionality Reduction?**\
+Reducing the number of features while retaining useful information.
+
+**Q20. What is a Denoising Autoencoder?**\
+An Autoencoder that reconstructs clean data from noisy input.
+
+**Q21. What is a Sparse Autoencoder?**\
+An Autoencoder that encourages sparse neuron activations.
+
+**Q22. What is a Variational Autoencoder?**\
+A generative Autoencoder that learns a probability distribution in latent space.
+
+**Q23. What is Normal Data?**\
+Data that follows the expected patterns.
+
+**Q24. What is Abnormal Data?**\
+Data that significantly differs from expected patterns.
+
+**Q25. Can Autoencoders detect fraud?**\
+Yes, they can flag unusual transaction patterns.
+
+**Q26. Can Autoencoders be used in cybersecurity?**\
+Yes, they can help identify unusual network traffic and potential intrusions.
+
+**Q27. What is Undercomplete Autoencoder?**\
+An Autoencoder whose bottleneck has fewer dimensions than the input.
+
+**Q28. What happens if the threshold is too high?**\
+Some anomalies may be incorrectly classified as normal.
+
+**Q29. What happens if the threshold is too low?**\
+Many normal samples may be incorrectly classified as anomalies.
+
+**Q30. Give applications of Autoencoders.**\
+Fraud detection, fault detection, image denoising and network intrusion detection.
+
+## **Practical 5: Continuous Bag of Words (CBOW)**
+
+30 Questions
+
+**Q1. What is the aim of this practical?**\
+To implement CBOW for predicting a target word using surrounding context words.
+
+**Q2. What is NLP?**\
+Natural Language Processing enables computers to process and understand human language.
+
+**Q3. What is Word2Vec?**\
+A technique for learning numerical vector representations of words.
+
+**Q4. What are the two Word2Vec architectures?**\
+CBOW and Skip-Gram.
+
+**Q5. What is CBOW?**\
+It predicts a target word using its surrounding context words.
+
+**Q6. What is Skip-Gram?**\
+It predicts surrounding context words using a target word.
+
+**Q7. What is a Corpus?**\
+A collection of text documents used for NLP.
+
+**Q8. What is Vocabulary?**\
+The set of unique words in a corpus.
+
+**Q9. What is Tokenization?**\
+Splitting text into smaller units called tokens.
+
+**Q10. What is a Context Window?**\
+The number of surrounding words considered for predicting a target word.
+
+**Q11. What is a Target Word?**\
+The word that the model tries to predict.
+
+**Q12. What are Context Words?**\
+Words surrounding the target word.
+
+**Q13. What is Word Embedding?**\
+A numerical vector representation of a word.
+
+**Q14. Why do we convert words into vectors?**\
+Because neural networks perform mathematical operations on numerical data.
+
+**Q15. What is One-Hot Encoding?**\
+A representation where one position is 1 and all other positions are 0.
+
+**Q16. What is the limitation of One-Hot Encoding?**\
+It creates large sparse vectors and does not directly represent semantic similarity.
+
+**Q17. What is Semantic Meaning?**\
+The meaning of a word or sentence.
+
+**Q18. What is Semantic Similarity?**\
+The degree of similarity in meaning between two words or texts.
+
+**Q19. What is a Word Vector?**\
+A vector containing numerical values representing a word.
+
+**Q20. What is the CBOW input?**\
+Surrounding context words.
+
+**Q21. What is the CBOW output?**\
+The predicted target word.
+
+**Q22. What is the hidden layer in CBOW used for?**\
+It combines context information into a representation used for prediction.
+
+**Q23. Does CBOW consider word order?**\
+Traditional CBOW treats context words as a bag, so it generally ignores their order.
+
+**Q24. Which model is generally faster, CBOW or Skip-Gram?**\
+CBOW is generally faster to train.
+
+**Q25. Which model can perform better on rare words?**\
+Skip-Gram often performs better on rare words.
+
+**Q26. What is Gensim?**\
+A Python library used for topic modelling and word embeddings.
+
+**Q27. What is the purpose of Word2Vec?**\
+To learn meaningful vector representations of words.
+
+**Q28. What is Cosine Similarity?**\
+A measure used to compare the similarity of two vectors.
+
+**Q29. What is the application of CBOW?**\
+Word prediction, text analysis, search and NLP applications.
+
+**Q30. Give an example of CBOW.**\
+Input: "The cat \_\_\_ on the mat." Output: "sits".
+
+## **Practical 6: Object Detection using Transfer Learning**
+
+35 Questions
+
+**Q1. What is the aim of this practical?**\
+To implement object detection using Transfer Learning with CNN architectures.
+
+**Q2. What is Transfer Learning?**\
+Reusing knowledge from an already trained model for a new related task.
+
+**Q3. What is a Pre-trained Model?**\
+A model that has already been trained on a dataset.
+
+**Q4. Why do we use Transfer Learning?**\
+It saves training time and reduces the need for large training datasets.
+
+**Q5. What is ImageNet?**\
+A large image database used for image recognition research and model training.
+
+**Q6. Name popular pre-trained CNN models.**\
+VGG16, VGG19, ResNet, MobileNet and Inception.
+
+**Q7. What is VGG16?**\
+A CNN architecture with 16 weight layers.
+
+**Q8. What is ResNet?**\
+A CNN architecture that uses residual connections to train deeper networks.
+
+**Q9. What is MobileNet?**\
+A lightweight CNN architecture designed for mobile devices.
+
+**Q10. What is Fine-Tuning?**\
+Further training some or all layers of a pre-trained model on a new dataset.
+
+**Q11. What is Feature Extraction?**\
+Using pre-trained layers to extract features from new images.
+
+**Q12. What is a Frozen Layer?**\
+A layer whose weights are kept unchanged during training.
+
+**Q13. What is Object Detection?**\
+Identifying objects and locating them in an image.
+
+**Q14. What is Object Localization?**\
+Finding the position of an object using a bounding box.
+
+**Q15. What is a Bounding Box?**\
+A rectangular box around a detected object.
+
+**Q16. What is a Class Label?**\
+The category name assigned to a detected object.
+
+**Q17. What is a Confidence Score?**\
+A score indicating the model's confidence in a detection.
+
+**Q18. What is IoU?**\
+Intersection over Union measures overlap between predicted and actual bounding boxes.
+
+**Q19. What is NMS?**\
+Non-Maximum Suppression removes duplicate overlapping detections.
+
+**Q20. What is YOLO?**\
+You Only Look Once, a real-time object detection algorithm.
+
+**Q21. What is SSD?**\
+Single Shot MultiBox Detector, an object detection architecture.
+
+**Q22. What is R-CNN?**\
+Region-based Convolutional Neural Network, a family of object detection models.
+
+**Q23. What is Classification?**\
+Identifying the category of an object.
+
+**Q24. What is Localization?**\
+Identifying the location of an object.
+
+**Q25. What is Precision?**\
+The proportion of predicted positive detections that are correct.
+
+**Q26. What is Recall?**\
+The proportion of actual objects that are correctly detected.
+
+**Q27. What is mAP?**\
+Mean Average Precision, a metric used to evaluate object detection models.
+
+**Q28. What is Real-Time Detection?**\
+Detecting objects quickly as images or video frames arrive.
+
+**Q29. What is the difference between VGG16 and MobileNet?**\
+VGG16 is relatively heavy, while MobileNet is designed to be lightweight and efficient.
+
+**Q30. What is the advantage of ResNet?**\
+Residual connections help train deeper neural networks.
+
+**Q31. What is the purpose of the classification head?**\
+To predict object classes.
+
+**Q32. What is the purpose of the detection head?**\
+To predict object classes and bounding box coordinates.
+
+**Q33. What is a Dataset Annotation?**\
+Adding labels and bounding box coordinates to training images.
+
+**Q34. What is Data Augmentation in Object Detection?**\
+Applying image transformations while maintaining corresponding bounding box labels.
+
+**Q35. Give applications of Object Detection.**\
+Autonomous vehicles, surveillance, traffic monitoring, robotics and medical imaging.
+
+# **Important Practical-Based Python Code Viva**
+
+These questions are useful if the examiner opens your code and asks what each function does.
+
+| Python function / command | Purpose                         |
+| ------------------------- | ------------------------------- |
+| `import tensorflow`       | Imports TensorFlow              |
+| `import keras`            | Imports Keras                   |
+| `import numpy`            | Imports NumPy                   |
+| `load_data()`             | Loads a dataset                 |
+| `reshape()`               | Changes the shape of an array   |
+| `astype()`                | Changes the data type           |
+| `Sequential()`            | Creates a sequential model      |
+| `Dense()`                 | Creates a fully connected layer |
+| `Flatten()`               | Converts data into 1D           |
+| `Conv2D()`                | Creates a 2D convolution layer  |
+| `MaxPooling2D()`          | Creates a max pooling layer     |
+| `Dropout()`               | Adds dropout regularization     |
+| `model.compile()`         | Configures the model            |
+| `model.fit()`             | Trains the model                |
+| `model.evaluate()`        | Evaluates the model             |
+| `model.predict()`         | Generates predictions           |
+| `model.summary()`         | Displays model architecture     |
+| `activation='relu'`       | Uses ReLU activation            |
+| `optimizer='adam'`        | Uses Adam optimizer             |
+| `loss='mse'`              | Uses Mean Squared Error loss    |
+
+# **Last-minute: Practical-wise questions examiner may ask**
+
+These are important because they test whether you actually understand what you performed.
+
+| Practical | Question                        | Answer                                |
+| --------- | ------------------------------- | ------------------------------------- |
+| 1         | Which framework did you study?  | TensorFlow, Keras, Theano and PyTorch |
+| 1         | Which language is used?         | Python                                |
+| 2         | Which dataset did you use?      | MNIST                                 |
+| 2         | What does the model predict?    | Handwritten digits                    |
+| 2         | How many output classes?        | 10                                    |
+| 3         | Which layer extracts features?  | Convolution layer                     |
+| 3         | Which layer reduces dimensions? | Pooling layer                         |
+| 3         | Why use Flatten?                | To convert feature maps into 1D       |
+| 4         | Which model is used?            | Autoencoder                           |
+| 4         | What does Encoder do?           | Compresses data                       |
+| 4         | What does Decoder do?           | Reconstructs data                     |
+| 4         | How are anomalies identified?   | Reconstruction error                  |
+| 5         | Which model is implemented?     | CBOW                                  |
+| 5         | What is its input?              | Context words                         |
+| 5         | What is its output?             | Target word                           |
+| 6         | What is Transfer Learning?      | Reusing a pre-trained model           |
+| 6         | What is a bounding box?         | Rectangle around an object            |
+| 6         | Name a pre-trained CNN.         | VGG16 or ResNet                       |
+
+## **Test your preparation – 10 practical-wise MCQs**
+
+**Viva practice test**
+
+0/10
+
+**1. Which dataset is used in Practical 2?**
+
+CIFAR-10
+
+MNIST
+
+ImageNet
+
+
+
+**2. Which layer extracts features in CNN?**
+
+Convolution
+
+Flatten
+
+Dense
+
+
+
+**3. What is the middle component of an Autoencoder?**
+
+Decoder
+
+Bottleneck
+
+Optimizer
+
+
+
+**4. What does CBOW predict?**
+
+Context words
+
+Target word
+
+Image class
+
+
+
+**5. What does Transfer Learning reuse?**
+
+Random values
+
+Pre-trained weights
+
+Only test data
+
+
+
+**6. Which function trains a Keras model?**
+
+predict()
+
+fit()
+
+summary()
+
+
+
+**7. Which activation is commonly used in hidden layers?**
+
+ReLU
+
+Softmax
+
+Linear only
+
+
+
+**8. Which metric measures bounding box overlap?**
+
+MSE
+
+IoU
+
+Recall
+
+
+
+**9. Which company developed TensorFlow?**
+
+Meta
+
+Google
+
+Microsoft
+
+
+
+**10. What does Max Pooling do?**
+
+Selects maximum value
+
+Adds all values
+
+Flattens image
+
+
+
+Submit answers
+
+**My recommendation:** For each practical, be ready to answer these five things without hesitation:
+
+1. What is the aim?
+2. What is the algorithm or working?
+3. Which dataset or library is used?
+4. What is the role of each important function?
+5. What is the expected output?
+
+These five areas can help you handle most practical viva questions.
+BRO, now I have checked your **actual SPPU BE IT Deep Learning syllabus (414443)** from the uploaded PDF.
+
+This time I'm giving you questions according to your **THEORY SYLLABUS – UNIT I to UNIT VI**, not just your six lab practicals.
+
+These are likely oral/viva questions covering definitions, differences, working, advantages, examples and conceptual questions. Answers are kept short enough to speak in front of an examiner.
+
+# **Deep Learning – Complete Unit-wise Oral Question Bank**
+
+**Your actual syllabus**
+
+Unit I – Fundamentals of Deep Learning
+
+**6 hrs**
+
+Unit II – Convolutional Neural Network
+
+**6 hrs**
+
+Unit III – Recurrent Neural Networks
+
+**6 hrs**
+
+Unit IV – Autoencoders
+
+**6 hrs**
+
+Unit V – Representation Learning
+
+**6 hrs**
+
+Unit VI – Applications of Deep Learning
+
+**6 hrs**
+
+Based on the uploaded BE IT 2019 Course syllabus, subject 414443, pages 14–16.
+
+# **UNIT I – Fundamentals of Deep Learning**
+
+
+
+Most important unit
+
+&#x20;25 oral questions
+
+
+
+**1. What is Deep Learning?**\
+Deep Learning is a subset of Machine Learning that uses multiple layers of neural networks to learn complex patterns from data.
+
+**2. What is the difference between Machine Learning and Deep Learning?**
+
+- ML often requires manual feature extraction.
+- DL automatically learns features using multiple neural network layers.
+- DL generally requires more data and computational power.
+
+**3. What is an Artificial Neural Network?**\
+ANN is a computational model inspired by the human brain, consisting of interconnected neurons.
+
+**4. What is a Multilayer Perceptron (MLP)?**\
+MLP is a feed-forward neural network containing an input layer, one or more hidden layers and an output layer.
+
+**5. What is a Feed Forward Neural Network?**\
+It is a neural network in which information flows only from input to output without feedback connections.
+
+**6. What is the difference between a single-layer and multilayer network?**
+
+| Single-layer                | Multilayer                |
+| --------------------------- | ------------------------- |
+| No hidden layer             | One or more hidden layers |
+| Simple problems             | Complex problems          |
+| Limited learning capability | Learns complex patterns   |
+
+**7. What is a Perceptron?**\
+It is the basic unit of a neural network that takes inputs, applies weights and produces an output.
+
+**8. What is Backpropagation?**\
+Backpropagation calculates the error gradients from the output layer towards earlier layers and updates weights to minimize the error.
+
+**9. What is Gradient Descent?**\
+It is an optimization algorithm that minimizes the loss function by updating model parameters in the opposite direction of the gradient.
+
+**10. What is the difference between Forward Propagation and Backpropagation?**
+
+| Forward Propagation   | Backpropagation                  |
+| --------------------- | -------------------------------- |
+| Input to output       | Output error propagated backward |
+| Calculates prediction | Calculates gradients             |
+| Generates output      | Helps update weights             |
+
+**11. What is the Vanishing Gradient Problem?**\
+It occurs when gradients become extremely small during backpropagation, making earlier layers learn very slowly.
+
+**12. What is the Exploding Gradient Problem?**\
+It occurs when gradients become extremely large, causing unstable weight updates.
+
+**13. What is an Activation Function?**\
+It decides the output of a neuron and introduces non-linearity into a neural network.
+
+**14. What is ReLU?**\
+ReLU stands for Rectified Linear Unit. It converts negative values into zero and keeps positive values unchanged.
+
+\\[ f(x)=\max(0,x) \\]
+
+**15. What is Leaky ReLU (LReLU)?**\
+It allows a small negative output instead of converting all negative values to zero.
+
+\\[ f(x)=\max(0.01x,x) \\]
+
+**16. What is ELU?**\
+ELU stands for Exponential Linear Unit. It uses a smooth exponential function for negative inputs and linear output for positive inputs.
+
+**17. Difference between ReLU, Leaky ReLU and ELU?**
+
+| ReLU                | Leaky ReLU            | ELU                          |
+| ------------------- | --------------------- | ---------------------------- |
+| Negative output = 0 | Small negative output | Smooth negative output       |
+| Simple              | Reduces dead neurons  | Smooth activation            |
+| Fast                | Fast                  | More computationally complex |
+
+**18. What is an Optimization Algorithm?**\
+It is an algorithm used to update weights and biases to minimize the loss function.
+
+**19. Name different optimization algorithms.**\
+SGD, Momentum, RMSProp, Adagrad and Adam.
+
+**20. What is Momentum?**\
+Momentum accelerates gradient descent by using a moving average of previous gradients.
+
+**21. What is Learning Rate?**\
+It controls the size of each parameter update during training.
+
+**22. What happens if the learning rate is too high?**\
+The model may overshoot the minimum and fail to converge.
+
+**23. What is a Hyperparameter?**\
+A parameter set before training, such as learning rate, number of layers, layer size and batch size.
+
+**24. What is Regularization?**\
+Regularization is a technique used to reduce overfitting and improve model generalization.
+
+**25. Explain Dropout, DropConnect, L1 and L2.**
+
+- **Dropout:** Randomly disables selected neurons during training.
+- **DropConnect:** Randomly disables selected connections or weights.
+- **L1:** Adds the absolute values of weights to the loss.
+- **L2:** Adds the squared values of weights to the loss.
+
+### **Extra conceptual questions – Unit I**
+
+26\. What is an Epoch? – One complete pass through the training dataset.
+
+27\. What is Batch Size? – Number of samples processed together before a parameter update.
+
+28\. What is an Iteration? – One parameter update using a batch of training data.
+
+29\. What is Loss Function? – It measures the difference between predicted and actual outputs.
+
+30\. What is Overfitting? – Model performs well on training data but poorly on unseen data.
+
+31\. What is Underfitting? – Model fails to learn important patterns from the data.
+
+32\. What is Generalization? – Ability of a model to perform well on unseen data.
+
+33\. What is the purpose of hidden layers? – To learn complex features and patterns.
+
+34\. Why do we need activation functions? – To introduce non-linearity.
+
+35\. Can a neural network work without an activation function? – Yes, but stacked linear layers behave like a single linear transformation.
+
+# **UNIT II – Convolutional Neural Network (CNN)**
+
+
+
+Very important unit
+
+&#x20;25 oral questions
+
+
+
+**1. What is CNN?**\
+CNN stands for Convolutional Neural Network. It is a deep learning architecture mainly used for processing image and spatial data.
+
+**2. Why is CNN used for image processing?**\
+It automatically extracts image features such as edges, shapes, textures and patterns.
+
+**3. What is Convolution?**\
+It is an operation in which a filter slides over an image to extract important features.
+
+**4. What is a Filter or Kernel?**\
+It is a small matrix used to detect specific features in an image.
+
+**5. What is a Feature Map?**\
+It is the output obtained after applying a convolution filter to an input image.
+
+**6. What is Parameter Sharing?**\
+Parameter sharing means using the same filter weights across different locations of an image.
+
+**7. What is the advantage of Parameter Sharing?**\
+It reduces the number of parameters and computational requirements.
+
+**8. What is Equivariant Representation?**\
+It means that when the input is transformed, the feature representation changes correspondingly. For example, shifting an image generally shifts its convolution feature map.
+
+**9. What is Pooling?**\
+Pooling is a downsampling operation used to reduce the spatial dimensions of feature maps.
+
+**10. What are the types of Pooling?**
+
+- Max Pooling
+- Average Pooling
+
+**11. What is Max Pooling?**\
+It selects the maximum value from a particular region.
+
+**12. What is Average Pooling?**\
+It calculates the average value from a particular region.
+
+**13. What is Stride?**\
+Stride is the number of pixels by which a filter moves over an image.
+
+**14. What is Padding?**\
+Padding adds extra pixels around the image to control the output size.
+
+**15. What are the types of Padding?**
+
+- Same Padding
+- Valid Padding
+
+**16. What is Flattening?**\
+Flattening converts multidimensional feature maps into a one-dimensional vector.
+
+**17. What is a Fully Connected Layer?**\
+It connects each neuron to all neurons in the previous layer and performs classification.
+
+**18. Explain the basic CNN architecture.**
+
+Input Image
+
+Convolution Layer
+
+ReLU Activation
+
+Pooling Layer
+
+Flatten Layer
+
+Fully Connected Layer
+
+Output / Classification
+
+**19. What is AlexNet?**\
+AlexNet is a popular deep CNN architecture that won the ImageNet Large Scale Visual Recognition Challenge in 2012.
+
+**20. How many layers does AlexNet have?**\
+It has 8 learnable layers: 5 convolutional layers and 3 fully connected layers.
+
+**21. What is the main feature of AlexNet?**\
+It uses ReLU activation, max pooling, dropout and GPU-based training.
+
+**22. What is the difference between CNN and ANN?**\
+CNN uses convolution filters and shares parameters, while a conventional fully connected ANN connects neurons densely.
+
+**23. What is Receptive Field?**\
+It is the region of the input image that influences a particular neuron in a feature map.
+
+**24. What are Variants of the Basic Convolution Function?**\
+Common variants include strided convolution, dilated convolution, transposed convolution, and locally connected convolution.
+
+**25. What is Dilated Convolution?**\
+It inserts spaces between filter elements to increase the receptive field without proportionally increasing the number of filter parameters.
+
+### **Extra conceptual questions – Unit II**
+
+26\. What is Depth in CNN? – Number of channels or feature maps.
+
+27\. What is a Channel? – A separate component of image data, such as R, G or B.
+
+28\. What is RGB? – Red, Green and Blue.
+
+29\. What is Grayscale? – An image represented using shades of gray.
+
+30\. What is Image Augmentation? – Creating modified training images using transformations such as rotation and flipping.
+
+31\. What is Local Connectivity? – A neuron connects only to a small local region of the input.
+
+32\. Why is CNN better for images? – It preserves spatial structure and learns local features.
+
+33\. What is an Image Classification task? – Assigning an image to a category.
+
+34\. Can CNN be used for videos? – Yes, using suitable spatial and temporal CNN architectures.
+
+35\. Give applications of CNN. – Face recognition, medical imaging, object detection and autonomous vehicles.
+
+# **UNIT III – Recurrent Neural Networks (RNN)**
+
+
+
+Important unit
+
+&#x20;25 oral questions
+
+
+
+**1. What is RNN?**\
+RNN stands for Recurrent Neural Network. It is a neural network designed to process sequential data by maintaining information from previous steps.
+
+**2. Why is RNN used?**\
+It is used for sequential data such as text, speech, time series and video sequences.
+
+**3. What is Sequential Data?**\
+Data in which the order of elements is important.
+
+**4. Give examples of sequential data.**\
+Text, speech, stock prices, weather records and time-series data.
+
+**5. What is the main feature of RNN?**\
+It maintains a hidden state that carries information from previous time steps.
+
+**6. What is Hidden State?**\
+It is the internal memory representation that stores information from previous inputs.
+
+**7. What is the difference between RNN and Feed Forward Neural Network?**
+
+| FFNN                         | RNN                       |
+| ---------------------------- | ------------------------- |
+| No recurrent connections     | Has recurrent connections |
+| No internal sequence memory  | Maintains hidden state    |
+| Independent input processing | Processes sequential data |
+
+**8. What is a Time Step?**\
+A time step represents one position in a sequence processed by an RNN.
+
+**9. What is an Unrolled RNN?**\
+It is a representation of an RNN showing its repeated computation across multiple time steps.
+
+**10. What are the types of RNN architectures?**
+
+- One-to-One
+- One-to-Many
+- Many-to-One
+- Many-to-Many
+
+**11. What is One-to-Many architecture?**\
+One input produces a sequence of outputs, such as image caption generation.
+
+**12. What is Many-to-One architecture?**\
+A sequence of inputs produces one output, such as sentiment classification.
+
+**13. What is Many-to-Many architecture?**\
+A sequence of inputs produces a sequence of outputs, such as machine translation.
+
+**14. What is LSTM?**\
+LSTM stands for Long Short-Term Memory. It is a special type of RNN designed to learn long-term dependencies.
+
+**15. Why is LSTM better than a simple RNN?**\
+It uses gates and a cell state to preserve important information over longer sequences.
+
+**16. What are the three gates in LSTM?**
+
+- Forget Gate
+- Input Gate
+- Output Gate
+
+**17. What is Forget Gate?**\
+It decides which information should be removed from the cell state.
+
+**18. What is Input Gate?**\
+It decides which new information should be stored.
+
+**19. What is Output Gate?**\
+It controls which information is passed as the hidden state output.
+
+**20. What is Cell State?**\
+It is the internal memory path that carries information across LSTM time steps.
+
+**21. What is Encoder-Decoder Architecture?**\
+It is a model in which an encoder converts input into a representation and a decoder generates the output sequence.
+
+**22. What is an Encoder?**\
+It processes the input sequence and creates a context representation.
+
+**23. What is a Decoder?**\
+It uses the encoded representation to generate an output sequence.
+
+**24. What is a Recursive Neural Network?**\
+It processes hierarchical structures by recursively combining representations of smaller components, such as words in a parse tree.
+
+**25. Difference between RNN and Recursive Neural Network?**
+
+| RNN                       | Recursive NN                 |
+| ------------------------- | ---------------------------- |
+| Processes sequential data | Processes hierarchical data  |
+| Uses time steps           | Uses recursive structures    |
+| Example: Speech           | Example: Sentence parse tree |
+
+### **Extra conceptual questions – Unit III**
+
+26\. What is BPTT? – Backpropagation Through Time, used to train RNNs.
+
+27\. What is the Vanishing Gradient Problem in RNN? – Gradients become very small across many time steps.
+
+28\. What is GRU? – Gated Recurrent Unit, a recurrent architecture using update and reset gates.
+
+29\. Difference between LSTM and GRU? – LSTM has three gates and a separate cell state; GRU uses two gates and combines state representations.
+
+30\. Can RNN remember previous inputs? – Yes, through its hidden state.
+
+31\. What is Sequence-to-Sequence Learning? – Learning to map one sequence into another sequence.
+
+32\. What is Sentiment Analysis? – Identifying the emotional polarity of text.
+
+33\. What is Machine Translation? – Translating text from one language to another.
+
+34\. What is Teacher Forcing? – Feeding the actual previous target token to a decoder during training.
+
+35\. What is a Bidirectional RNN? – An RNN that processes a sequence in both forward and backward directions.
+
+# **UNIT IV – Autoencoders**
+
+
+
+Very important unit
+
+&#x20;25 oral questions
+
+
+
+**1. What is an Autoencoder?**\
+An Autoencoder is an unsupervised neural network that learns to compress input data and reconstruct it.
+
+**2. What are the main components of an Autoencoder?**\
+Encoder, latent representation (bottleneck) and decoder.
+
+**3. What is an Encoder?**\
+It converts input data into a compressed representation.
+
+**4. What is a Decoder?**\
+It reconstructs the original input from the compressed representation.
+
+**5. What is a Bottleneck Layer?**\
+It is the compressed middle representation of an Autoencoder.
+
+**6. What is an Undercomplete Autoencoder?**\
+It is an Autoencoder whose latent representation has fewer dimensions than the input.
+
+**7. Why is an Undercomplete Autoencoder used?**\
+To learn important features while reducing dimensionality.
+
+**8. What is a Regularized Autoencoder?**\
+It uses additional constraints or penalties to prevent the network from simply copying the input.
+
+**9. What is a Sparse Autoencoder?**\
+It encourages only a small number of neurons to be active at a time.
+
+**10. What is Sparsity?**\
+Sparsity means that most neuron activations are zero or close to zero.
+
+**11. What is a Stochastic Encoder?**\
+It produces a probability distribution or samples a latent representation instead of always producing a fixed representation.
+
+**12. What is a Stochastic Decoder?**\
+It models a probability distribution over reconstructed outputs.
+
+**13. What is a Denoising Autoencoder?**\
+It learns to reconstruct clean data from corrupted or noisy input.
+
+**14. How does a Denoising Autoencoder work?**\
+Noise is added to input data, and the model is trained to reconstruct the original clean data.
+
+**15. What is a Contractive Autoencoder?**\
+It is an Autoencoder that penalizes sensitivity of the learned representation to small input changes.
+
+**16. What is the purpose of a Contractive Autoencoder?**\
+To learn robust representations that are less sensitive to small variations in input.
+
+**17. What is Reconstruction Error?**\
+It is the difference between the original input and reconstructed output.
+
+**18. Which loss functions are used in Autoencoders?**\
+Mean Squared Error and Binary Cross-Entropy are commonly used.
+
+**19. What is Latent Space?**\
+It is the compressed feature space learned by the encoder.
+
+**20. What is the difference between Encoder and Decoder?**
+
+| Encoder               | Decoder                  |
+| --------------------- | ------------------------ |
+| Compresses data       | Reconstructs data        |
+| Input to latent space | Latent space to output   |
+| Extracts features     | Generates reconstruction |
+
+**21. What is a Variational Autoencoder (VAE)?**\
+VAE is a generative model that learns a probability distribution in latent space and can generate new samples.
+
+**22. Difference between a normal Autoencoder and VAE?**
+
+| Normal Autoencoder               | VAE                             |
+| -------------------------------- | ------------------------------- |
+| Learns compressed representation | Learns probability distribution |
+| Mainly reconstructs input        | Can generate new data           |
+| Deterministic encoding is common | Probabilistic encoding          |
+
+**23. What is Anomaly Detection using Autoencoders?**\
+It detects abnormal data by identifying samples with high reconstruction error.
+
+**24. What are the applications of Autoencoders?**\
+Data compression, image denoising, anomaly detection, feature extraction and dimensionality reduction.
+
+**25. Can an Autoencoder work without labeled data?**\
+Yes. It generally learns from input data by reconstructing it, without requiring class labels.
+
+### **Extra conceptual questions – Unit IV**
+
+26\. What is an Anomaly? – An unusual pattern that differs from normal data.
+
+27\. What is an Anomaly Score? – A numerical measure indicating how unusual a sample is.
+
+28\. What is Thresholding? – Using a selected threshold to classify samples based on reconstruction error.
+
+29\. What happens if the bottleneck is too large? – The model may learn to copy inputs without learning useful compressed features.
+
+30\. What is Feature Learning? – Automatically learning useful representations from raw data.
+
+31\. Can Autoencoders be used for image restoration? – Yes, they can reconstruct damaged or noisy images.
+
+32\. What is Regularization Loss? – An additional penalty added to the reconstruction loss to encourage desired model properties.
+
+33\. What is the difference between Denoising and Contractive Autoencoders? – Denoising learns reconstruction from corrupted input; Contractive penalizes sensitivity to small input changes.
+
+34\. What is the main objective of an Autoencoder? – To learn useful compressed representations and reconstruct input.
+
+35\. Give a real-life example of an Autoencoder. – Detecting unusual transactions or network activity.
+
+# **UNIT V – Representation Learning**
+
+
+
+Important unit
+
+&#x20;25 oral questions
+
+
+
+**1. What is Representation Learning?**\
+It is a technique in which a model automatically learns useful features or representations from raw data.
+
+**2. Why is Representation Learning important?**\
+It reduces manual feature engineering and helps models understand complex data.
+
+**3. What is Feature Learning?**\
+It is the automatic extraction of meaningful features from input data.
+
+**4. What is Distributed Representation?**\
+It represents information using multiple values or neurons rather than a single individual feature.
+
+**5. Give an example of Distributed Representation.**\
+Word embeddings, where a word is represented by a numerical vector.
+
+**6. What is Greedy Layerwise Pre-training?**\
+It is a training approach in which neural network layers are trained one at a time, starting from the first layer.
+
+**7. Why is Greedy Layerwise Pre-training used?**\
+It helps initialize deep neural networks with useful representations before complete network training.
+
+**8. How does Greedy Layerwise Pre-training work?**
+
+- Train the first layer using input data.
+- Use its output as input to the next layer.
+- Train each subsequent layer.
+- Fine-tune the complete network.
+
+**9. What is Pre-training?**\
+It is the process of training a model on data before training it for a specific target task.
+
+**10. What is Transfer Learning?**\
+It reuses knowledge from a previously trained model for a new but related task.
+
+**11. Why is Transfer Learning used?**\
+It saves time, reduces computational requirements and helps when training data is limited.
+
+**12. What is a Pre-trained Model?**\
+A model that has already learned features from a large dataset.
+
+**13. Give examples of pre-trained models.**\
+VGG16, ResNet, MobileNet, DenseNet and Inception.
+
+**14. What is Fine-Tuning?**\
+It is the process of further training selected layers of a pre-trained model on a new dataset.
+
+**15. What is Feature Extraction in Transfer Learning?**\
+It uses the learned features of a pre-trained model while keeping its weights fixed.
+
+**16. Difference between Feature Extraction and Fine-Tuning?**
+
+| Feature Extraction               | Fine-Tuning                 |
+| -------------------------------- | --------------------------- |
+| Pre-trained layers remain frozen | Some layers are unfrozen    |
+| Uses existing features           | Adapts features to new data |
+| Less training required           | More training required      |
+
+**17. What is Domain Adaptation?**\
+It is a technique that adapts a model trained in one data domain to work effectively in another domain.
+
+**18. What is Source Domain?**\
+The original domain from which training data is obtained.
+
+**19. What is Target Domain?**\
+The new domain where the model needs to perform.
+
+**20. What is Domain Shift?**\
+It occurs when the data distribution in the training domain differs from that in the target domain.
+
+**21. What is DenseNet?**\
+DenseNet stands for Densely Connected Convolutional Network. It is a CNN architecture in which each layer receives feature maps from all preceding layers in a dense block.
+
+**22. What is Dense Connectivity?**\
+It means each layer is connected to all earlier layers within the same dense block.
+
+**23. What is the advantage of DenseNet?**\
+It encourages feature reuse, improves gradient flow and can reduce the number of parameters compared with some conventional architectures.
+
+**24. Difference between ResNet and DenseNet?**
+
+| ResNet                    | DenseNet                              |
+| ------------------------- | ------------------------------------- |
+| Uses residual connections | Uses dense connections                |
+| Adds previous features    | Concatenates previous features        |
+| Shortcut connections      | All-to-all connections within a block |
+
+**25. What are the applications of Representation Learning?**\
+Image recognition, NLP, speech recognition, recommendation systems and transfer learning.
+
+### **Extra conceptual questions – Unit V**
+
+26\. What is a Feature Vector? – A numerical representation of input features.
+
+27\. What is Embedding? – Mapping data into a lower-dimensional numerical vector space.
+
+28\. What is General Feature Extraction? – Identifying useful patterns from raw data.
+
+29\. What is Knowledge Transfer? – Reusing learned information from one task for another.
+
+30\. What is Domain Generalization? – Training models to perform well across different domains.
+
+31\. What is a Dense Block in DenseNet? – A group of layers where each layer receives feature maps from all preceding layers.
+
+32\. What is Transition Layer in DenseNet? – A layer used to reduce feature map dimensions between dense blocks.
+
+33\. What is the role of 1×1 convolution in DenseNet? – It helps reduce the number of channels and computational cost.
+
+34\. What is Global Average Pooling? – It calculates the average of each feature map to produce a compact feature vector.
+
+35\. What is the main difference between traditional feature extraction and representation learning? – Traditional methods often use manually designed features; representation learning learns features automatically.
+
+# **UNIT VI – Applications of Deep Learning**
+
+
+
+Application-based oral questions
+
+&#x20;30 oral questions
+
+
+
+**1. What are the applications of Deep Learning?**\
+Image classification, social network analysis, speech recognition, recommender systems and Natural Language Processing.
+
+**2. What is Image Classification?**\
+It is the process of assigning an image to a particular category.
+
+**3. Which neural network is commonly used for Image Classification?**\
+CNN.
+
+**4. Give examples of Image Classification.**\
+Identifying whether an image contains a cat, dog, car or human.
+
+**5. What is Social Network Analysis?**\
+It is the study of relationships and interactions among users in social networks.
+
+**6. How is Deep Learning used in Social Network Analysis?**\
+It helps in recommendation, fake account detection, community detection and sentiment analysis.
+
+**7. What is a Social Network?**\
+A network of people or organizations connected through relationships or interactions.
+
+**8. What is Node in Social Network Analysis?**\
+A node represents an individual or entity in a network.
+
+**9. What is Edge?**\
+An edge represents a relationship or connection between two nodes.
+
+**10. What is Community Detection?**\
+It identifies groups of nodes that are more closely connected to each other.
+
+**11. What is Speech Recognition?**\
+It converts spoken language into text or machine-readable commands.
+
+**12. Which Deep Learning models are used in Speech Recognition?**\
+RNN, LSTM, CNN and Transformer-based models.
+
+**13. What is Speech-to-Text?**\
+It is the conversion of spoken words into written text.
+
+**14. What is Text-to-Speech?**\
+It converts written text into spoken audio.
+
+**15. What is Natural Language Processing?**\
+NLP enables computers to process, understand and generate human language.
+
+**16. What are the applications of NLP?**\
+Chatbots, machine translation, sentiment analysis, text summarization and question answering.
+
+**17. What is Sentiment Analysis?**\
+It identifies opinions or emotions expressed in text, commonly positive, negative or neutral.
+
+**18. What is Machine Translation?**\
+It converts text from one language into another.
+
+**19. What is a Chatbot?**\
+A software application that interacts with users through text or speech.
+
+**20. What is a Recommender System?**\
+It suggests products, movies, music or other items based on user preferences and behavior.
+
+**21. Give examples of Recommender Systems.**\
+Netflix, Amazon, YouTube and Spotify.
+
+**22. What are the types of Recommender Systems?**
+
+- Content-Based Filtering
+- Collaborative Filtering
+- Hybrid Recommendation
+
+**23. What is Content-Based Filtering?**\
+It recommends items based on similarity to items a user previously liked.
+
+**24. What is Collaborative Filtering?**\
+It recommends items based on preferences and behavior of similar users or interactions.
+
+**25. What is Hybrid Recommendation?**\
+It combines content-based and collaborative filtering approaches.
+
+**26. What is Cold Start Problem?**\
+It occurs when a recommender system lacks sufficient information about a new user or new item.
+
+**27. How does Deep Learning improve recommendation systems?**\
+It learns complex relationships between users, items and their preferences.
+
+**28. What is Face Recognition?**\
+It identifies or verifies a person using facial features.
+
+**29. What is Fraud Detection using Deep Learning?**\
+It identifies suspicious patterns in transactions or activities using trained models.
+
+**30. What is the main advantage of Deep Learning in real-world applications?**\
+It automatically learns complex patterns from large amounts of data and can improve prediction performance.
+
+### **Extra application-based questions**
+
+31\. Which model is suitable for image classification? – CNN.
+
+32\. Which models are useful for sequential speech data? – RNN and LSTM.
+
+33\. Which techniques are used for text processing? – NLP, embeddings and sequence models.
+
+34\. How does YouTube recommend videos? – By learning user preferences and patterns from viewing and interaction data.
+
+35\. How is Deep Learning used in healthcare? – Medical image analysis, disease prediction and decision support.
+
+36\. How is Deep Learning used in autonomous vehicles? – Object detection, lane recognition and scene understanding.
+
+37\. What is a Fake Account Detection System? – A system that identifies suspicious or fraudulent social media accounts.
+
+38\. What is Speech Emotion Recognition? – Identifying emotions from voice characteristics.
+
+39\. What is Text Classification? – Assigning text to predefined categories.
+
+40\. What is Personalization? – Providing recommendations or content based on individual user preferences.
+
+# **Most Important Difference-Based Questions**
+
+These are frequently useful in oral exams because examiners like asking comparisons.
+
+| Comparison                               | Main difference                                                 |
+| ---------------------------------------- | --------------------------------------------------------------- |
+| AI vs ML vs DL                           | Intelligence vs learning vs deep neural networks                |
+| ANN vs MLP                               | General neural network vs multilayer feed-forward network       |
+| FFNN vs RNN                              | No recurrent memory vs sequential memory                        |
+| CNN vs RNN                               | Spatial data vs sequential data                                 |
+| ReLU vs LReLU                            | Zero negative output vs small negative output                   |
+| Gradient Descent vs Backpropagation      | Optimization algorithm vs gradient calculation method           |
+| Max Pooling vs Average Pooling           | Maximum value vs average value                                  |
+| RNN vs LSTM                              | Basic recurrent network vs gated memory network                 |
+| LSTM vs GRU                              | Three gates vs two gates                                        |
+| Encoder vs Decoder                       | Compresses vs reconstructs                                      |
+| Undercomplete vs Sparse Autoencoder      | Smaller latent dimension vs sparse activations                  |
+| Denoising vs Contractive Autoencoder     | Reconstructs clean input vs learns locally insensitive features |
+| Feature Extraction vs Fine-Tuning        | Frozen weights vs further training                              |
+| ResNet vs DenseNet                       | Addition vs concatenation of features                           |
+| Content-Based vs Collaborative Filtering | Item similarity vs user interaction patterns                    |
+
+# **Top 30 Questions to Prepare First**
+
+High-priority revision list
+
+If you have very little time before your oral, prepare these first.
+
+1. What is Deep Learning?
+2. What is MLP?
+3. What is Feed Forward Neural Network?
+4. Explain Backpropagation.
+5. What is Gradient Descent?
+6. What is Vanishing Gradient?
+7. Explain ReLU, LReLU and ELU.
+8. What is Dropout?
+9. Difference between L1 and L2 regularization.
+10. What is CNN?
+11. Explain Convolution Operation.
+12. What is Parameter Sharing?
+13. What is Equivariant Representation?
+14. What is Pooling?
+15. Explain AlexNet.
+16. What is RNN?
+17. Difference between FFNN and RNN.
+18. What is LSTM?
+19. Explain the three LSTM gates.
+20. What is Encoder-Decoder Architecture?
+21. What is an Autoencoder?
+22. What is Undercomplete Autoencoder?
+23. What is Denoising Autoencoder?
+24. What is Contractive Autoencoder?
+25. What is Greedy Layerwise Pre-training?
+26. What is Transfer Learning?
+27. What is Domain Adaptation?
+28. Explain DenseNet.
+29. What is Speech Recognition?
+30. Explain Collaborative Filtering.
+
+# **Quick oral practice – Select your unit**
+
+You can use this to practise one unit at a time.
+
+**Choose a unit for oral practice**
+
+**Unit I** – Fundamentals of Deep Learning
+
+**Unit II** – Convolutional Neural Network
+
+**Unit III** – Recurrent Neural Networks
+
+**Unit IV** – Autoencoders
+
+**Unit V** – Representation Learning
+
+**Unit VI** – Applications of Deep Learning
+
+Start my viva
+
+**My suggestion:** Don't just memorize definitions. For every unit, understand at least one working example, one diagram and two differences. That will help you answer follow-up questions instead of getting stuck.
+
+BE_IT_2019_Course_Syllabus.pdf
