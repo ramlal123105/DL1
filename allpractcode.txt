@@ -1,0 +1,719 @@
+################ Practical 1 #################
+
+import numpy as np
+
+
+import tensorflow as tf
+
+
+from keras import datasets
+# Load MNIST datasets from keras
+(train_images, train_labels), (test_images, test_labels) = datasets.mnist.load_data()
+
+
+
+train_images.shape
+
+
+test_images.shape
+
+
+import torch
+import torch.nn as nn
+
+
+print(torch.__version__)   
+
+
+################ Practical 2-MINST #################
+        
+%pip install scikit-learn
+
+
+%pip install matplotlib
+
+
+
+from sklearn.preprocessing import LabelBinarizer
+from sklearn.metrics import classification_report
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.optimizers import SGD
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras import backend as K
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+
+#grabbing the mnist dataset
+((X_train, Y_train), (X_test, Y_test)) = mnist.load_data()
+X_train = X_train.reshape((X_train.shape[0], 28 * 28 * 1))
+X_test = X_test.reshape((X_test.shape[0], 28 * 28 * 1))
+X_train = X_train.astype("float32") / 255.0
+X_test = X_test.astype("float32") / 255.0
+
+
+
+lb = LabelBinarizer()
+Y_train = lb.fit_transform(Y_train)
+Y_test = lb.transform(Y_test)
+
+
+#building the model
+model = Sequential()
+model.add(Dense(128, input_shape=(784,), activation="sigmoid"))
+model.add(Dense(64, activation="sigmoid"))
+model.add(Dense(10, activation="softmax"))
+
+
+
+
+sgd = SGD(0.01)
+epochs=10
+model.compile(loss="categorical_crossentropy", optimizer=sgd,metrics=["accuracy"])
+H = model.fit(X_train, Y_train, validation_data=(X_test, Y_test),epochs=epochs, batch_size=128)
+
+
+
+#making the predictions
+predictions = model.predict(X_test, batch_size=128)
+print(classification_report(Y_test.argmax(axis=1),predictions.argmax(axis=1),target_names=[str(x) for x in lb.classes_]))
+
+
+
+
+#plotting the training loss and accuracy
+plt.style.use("ggplot")
+plt.figure()
+plt.plot(np.arange(0, epochs), H.history["loss"], label="train_loss")
+plt.plot(np.arange(0, epochs), H.history["val_loss"], label="val_loss")
+plt.plot(np.arange(0, epochs), H.history["accuracy"], label="train_acc")
+plt.plot(np.arange(0, epochs), H.history["val_accuracy"], label="val_acc")
+plt.title("Training Loss and Accuracy")
+plt.xlabel("Epoch #")
+plt.ylabel("Loss/Accuracy")
+plt.legend()
+
+################ Practical 2-CIFER #################
+
+import matplotlib.pyplot as plt
+from tensorflow.keras.datasets import cifar10
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.optimizers import SGD
+from tensorflow.keras.utils import to_categorical
+
+
+# Load dataset
+(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+
+
+# Preprocessing
+x_train = x_train.reshape(-1, 3072).astype('float32') / 255
+x_test = x_test.reshape(-1, 3072).astype('float32') / 255
+y_train = to_categorical(y_train, 10)
+y_test = to_categorical(y_test, 10)
+
+
+# Define model
+model = Sequential([
+    Dense(128, activation='relu', input_shape=(3072,)),
+    Dense(64, activation='relu'),
+    Dense(10, activation='softmax')
+])
+
+
+# Compile and train
+model.compile(optimizer=SGD(0.01),
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
+
+history = model.fit(x_train, y_train, epochs=10,
+                    batch_size=128,
+                    validation_data=(x_test, y_test))
+
+
+
+
+# Evaluate
+model.evaluate(x_test, y_test)
+
+
+# Plot
+plt.plot(history.history['accuracy'], label='Accuracy')
+plt.plot(history.history['val_accuracy'], label='Val Accuracy')
+plt.plot(history.history['loss'], label='Loss')
+plt.legend()
+plt.show()
+
+
+
+################ Practical 3-MNIST #################
+
+%pip install pandas
+
+
+import keras
+from keras.models import Sequential
+from keras.layers import Conv2D, MaxPooling2D,Dense, Flatten
+from keras.utils import to_categorical
+from keras.datasets import mnist
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+     
+
+
+(xtrain,ytrain),(xtest,ytest)=mnist.load_data()
+
+
+xtrain=xtrain.reshape((xtrain.shape[0],28,28,1))
+xtest=xtest.reshape((xtest.shape[0],28,28,1))
+     
+
+
+
+train_norm = xtrain.astype('float32')
+test_norm = xtest.astype('float32')
+xtrain = train_norm/255.0
+xtest = test_norm/255.0
+     
+
+
+for i in range(9):
+  plt.subplot(330+1+i)
+  plt.imshow(xtrain[i])
+
+
+
+model = Sequential()
+model.add(Conv2D(32,(3,3),activation='relu',input_shape=(28,28,1)))
+model.add(MaxPooling2D(2,2))
+model.add(Flatten())
+model.add(Dense(100,activation='relu'))
+model.add(Dense(10,activation='softmax'))
+
+
+
+
+model.compile(optimizer='sgd',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
+
+
+
+history=model.fit(xtrain,ytrain,epochs=5,validation_data=(xtest,ytest))
+
+
+
+predictions =model.predict(xtest)
+
+
+
+import random
+index = random.randint(1,10000)
+plt.imshow(xtest[index])
+
+
+
+model.summary()
+
+
+
+
+pred_num = max(predictions[index])
+for i in range(len(predictions[index])):
+    if(predictions[index][i] == pred_num):
+        print("Predicted number is: ",i)
+        break
+     
+
+
+print(model.evaluate(xtest,ytest))
+     
+
+
+
+import pandas as pd
+pd.DataFrame(history.history).plot(figsize=(9,5))
+plt.show()
+
+
+
+plt.figure(figsize=(13,4))
+plt.subplot(1,2,1)
+plt.plot(history.history['loss'],label='Training loss')
+plt.plot(history.history['val_loss'],label='Vaidation loss')
+plt.xlabel('Epochs')
+plt.ylabel('loss')
+plt.legend()
+plt.subplot(1,2,2)
+plt.plot(history.history['accuracy'],label='Training accuracy')
+plt.plot(history.history['val_accuracy'],label='Testing accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('accuracy')
+plt.legend()
+
+
+
+
+################ Practical 3-CIFER #################
+
+import matplotlib.pyplot as plt
+import tensorflow as tf
+from tensorflow.keras.datasets import cifar10
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import (Conv2D, MaxPooling2D, Flatten, Dense,
+                                     Dropout, BatchNormalization)
+
+
+
+# 1. Load and preprocess
+(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+
+x_train = x_train.astype('float32') / 255
+x_test = x_test.astype('float32') / 255
+
+
+
+# 2. Define CNN architecture
+model = Sequential([
+    Conv2D(32, (3,3), padding='same', activation='relu', input_shape=(32,32,3)),
+    BatchNormalization(),
+    Conv2D(32, (3,3), padding='same', activation='relu'),
+    BatchNormalization(),
+    MaxPooling2D((2,2)),
+    Dropout(0.25),
+
+    Conv2D(64, (3,3), padding='same', activation='relu'),
+    BatchNormalization(),
+    Conv2D(64, (3,3), padding='same', activation='relu'),
+    BatchNormalization(),
+    MaxPooling2D((2,2)),
+    Dropout(0.3),
+
+    Conv2D(128, (3,3), padding='same', activation='relu'),
+    BatchNormalization(),
+    Conv2D(128, (3,3), padding='same', activation='relu'),
+    BatchNormalization(),
+    MaxPooling2D((2,2)),
+    Dropout(0.4),
+
+    Flatten(),
+    Dense(128, activation='relu'),
+    Dropout(0.5),
+    Dense(10)
+])
+
+
+
+# 3. Compile and train
+model.compile(optimizer='adam',
+              loss=tf.keras.losses.SparseCategoricalCrossentropy(
+                  from_logits=True),
+              metrics=['accuracy'])
+
+history = model.fit(x_train, y_train, epochs=30,
+                    batch_size=64,
+                    validation_data=(x_test, y_test))
+
+
+
+# 4. Evaluate
+model.evaluate(x_test, y_test)
+
+
+# Plot accuracy
+plt.plot(history.history['accuracy'], label='Training')
+plt.plot(history.history['val_accuracy'], label='Validation')
+plt.legend()
+plt.show()
+
+
+################ Practical 4 #################
+#importing libraries and dataset
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score
+from tensorflow.keras.optimizers import Adam
+from sklearn.preprocessing import MinMaxScaler
+from tensorflow.keras import Model, Sequential
+from tensorflow.keras.layers import Dense, Dropout
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.losses import MeanSquaredLogarithmicError
+
+PATH_TO_DATA = 'http://storage.googleapis.com/download.tensorflow.org/data/ecg.csv'
+data = pd.read_csv(PATH_TO_DATA, header=None)
+data.head()
+
+
+
+
+#finding shape of the dataset
+data.shape
+
+
+
+#splitting training and testing dataset
+features = data.drop(140, axis=1)
+target = data[140]
+x_train, x_test, y_train, y_test = train_test_split(
+    features, target, test_size=0.2, stratify=target
+)
+train_index = y_train[y_train == 1].index
+train_data = x_train.loc[train_index]
+
+
+
+
+#scaling the data using MinMaxScaler
+min_max_scaler = MinMaxScaler(feature_range=(0, 1))
+x_train_scaled = min_max_scaler.fit_transform(train_data.copy())
+x_test_scaled = min_max_scaler.transform(x_test.copy())
+
+
+
+
+
+#creating autoencoder subclass by extending Model class from keras
+class AutoEncoder(Model):
+  def __init__(self, output_units, ldim=8):
+    super().__init__()
+    self.encoder = Sequential([
+      Dense(64, activation='relu'),
+      Dropout(0.1),
+      Dense(32, activation='relu'),
+      Dropout(0.1),
+      Dense(16, activation='relu'),
+      Dropout(0.1),
+      Dense(ldim, activation='relu')
+    ])
+    self.decoder = Sequential([
+      Dense(16, activation='relu'),
+      Dropout(0.1),
+      Dense(32, activation='relu'),
+      Dropout(0.1),
+      Dense(64, activation='relu'),
+      Dropout(0.1),
+      Dense(output_units, activation='sigmoid')
+    ])
+  
+  def call(self, inputs):
+    encoded = self.encoder(inputs)
+    decoded = self.decoder(encoded)
+    return decoded
+
+
+
+#model configuration
+model = AutoEncoder(output_units=x_train_scaled.shape[1])
+model.compile(loss='msle', metrics=['mse'], optimizer='adam')
+epochs = 20
+
+history = model.fit(
+    x_train_scaled,
+    x_train_scaled,
+    epochs=epochs,
+    batch_size=512,
+    validation_data=(x_test_scaled, x_test_scaled)
+)
+
+
+
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.xlabel('Epochs')
+plt.ylabel('MSLE Loss')
+plt.legend(['loss', 'val_loss'])
+plt.show()
+
+
+
+
+#finding threshold for anomaly and doing predictions
+def find_threshold(model, x_train_scaled):
+  reconstructions = model.predict(x_train_scaled)
+  reconstruction_errors = tf.keras.losses.msle(reconstructions, x_train_scaled)
+  threshold = np.mean(reconstruction_errors.numpy()) \
+   + np.std(reconstruction_errors.numpy())
+  return threshold
+
+def get_predictions(model, x_test_scaled, threshold):
+  predictions = model.predict(x_test_scaled)
+  errors = tf.keras.losses.msle(predictions, x_test_scaled)
+  anomaly_mask = pd.Series(errors) > threshold
+  preds = anomaly_mask.map(lambda x: 0.0 if x == True else 1.0)
+  return preds
+
+threshold = find_threshold(model, x_train_scaled)
+print(f"Threshold: {threshold}")
+
+
+
+
+#getting accuracy score
+predictions = get_predictions(model, x_test_scaled, threshold)
+accuracy_score(predictions, y_test)
+
+
+
+################ Practical 5 #################
+
+
+"""
+Continuous Bag of Words (CBOW) model from scratch with NumPy.
+
+Stages:
+  a. Data preparation
+  b. Generate training data
+  c. Train model
+  d. Output
+"""
+import re
+import numpy as np
+
+np.random.seed(42)
+
+
+
+# ---------------------------------------------------------------
+# a. DATA PREPARATION
+# ---------------------------------------------------------------
+corpus = """
+The quick brown fox jumps over the lazy dog.
+The dog barks at the fox and the fox runs away.
+A quick brown dog jumps over the lazy fox.
+Natural language processing helps computers understand human language.
+Word embeddings capture the meaning of words in vectors.
+The model learns word vectors by predicting a word from its context.
+Computers learn language from large amounts of text.
+The cat and the dog are friends and the cat likes the dog.
+"""
+
+
+def preprocess(text):
+    text = text.lower()
+    text = re.sub(r"[^a-z\s]", " ", text)      # drop punctuation
+    return text.split()                         # tokenise
+
+
+tokens = preprocess(corpus)
+vocab = sorted(set(tokens))
+V = len(vocab)
+word2idx = {w: i for i, w in enumerate(vocab)}
+idx2word = {i: w for w, i in word2idx.items()}
+
+print("=== a. Data preparation ===")
+print(f"Total tokens : {len(tokens)}")
+print(f"Vocab size   : {V}")
+print(f"Vocabulary   : {vocab}\n")
+
+
+
+# ---------------------------------------------------------------
+# b. GENERATE TRAINING DATA  (context words -> target word)
+# ---------------------------------------------------------------
+WINDOW = 2   # words on each side of the target
+
+
+def generate_training_data(tokens, window):
+    data = []
+    for i, target in enumerate(tokens):
+        context = [tokens[j]
+                   for j in range(max(0, i - window), min(len(tokens), i + window + 1))
+                   if j != i]
+        data.append((context, target))
+    return data
+
+
+def one_hot(idx, size):
+    v = np.zeros(size)
+    v[idx] = 1
+    return v
+
+
+pairs = generate_training_data(tokens, WINDOW)
+# X: (context indices list), y: target index
+X = [[word2idx[w] for w in ctx] for ctx, _ in pairs]
+y = [word2idx[t] for _, t in pairs]
+
+print("=== b. Training data (first 5 samples) ===")
+for ctx, tgt in pairs[:5]:
+    print(f"  context={ctx}  ->  target='{tgt}'")
+print(f"Total training samples: {len(pairs)}\n")
+
+
+
+
+
+
+
+# ---------------------------------------------------------------
+# c. TRAIN MODEL
+# ---------------------------------------------------------------
+N = 10            # embedding dimension
+EPOCHS = 500
+LR = 0.05
+
+W1 = np.random.randn(V, N) * 0.1    # input  -> hidden (word embeddings)
+W2 = np.random.randn(N, V) * 0.1    # hidden -> output
+
+
+def softmax(u):
+    e = np.exp(u - np.max(u))
+    return e / e.sum()
+
+
+def forward(context_idx):
+    # average the one-hot context vectors == average the rows of W1
+    x_avg = np.mean([one_hot(i, V) for i in context_idx], axis=0)
+    h = x_avg @ W1                  # hidden layer (N,)
+    u = h @ W2                      # scores (V,)
+    y_hat = softmax(u)              # probabilities (V,)
+    return x_avg, h, y_hat
+
+
+print("=== c. Training ===")
+loss_history = []
+for epoch in range(1, EPOCHS + 1):
+    total_loss = 0.0
+    for ctx_idx, tgt_idx in zip(X, y):
+        x_avg, h, y_hat = forward(ctx_idx)
+
+        # cross-entropy loss
+        total_loss += -np.log(y_hat[tgt_idx] + 1e-9)
+
+        # backprop
+        e = y_hat.copy()
+        e[tgt_idx] -= 1                       # dL/du
+        dW2 = np.outer(h, e)                  # (N, V)
+        dh = W2 @ e                           # (N,)
+        dW1 = np.outer(x_avg, dh)             # (V, N)
+
+        W2 -= LR * dW2
+        W1 -= LR * dW1
+
+    loss_history.append(total_loss / len(X))
+    if epoch % 50 == 0 or epoch == 1:
+        print(f"  Epoch {epoch:4d}/{EPOCHS}  loss = {loss_history[-1]:.4f}")
+
+
+
+
+
+
+# ---------------------------------------------------------------
+# d. OUTPUT
+# ---------------------------------------------------------------
+print("\n=== d. Output ===")
+
+
+def predict(context_words, top_k=3):
+    idxs = [word2idx[w] for w in context_words]
+    _, _, y_hat = forward(idxs)
+    top = np.argsort(y_hat)[::-1][:top_k]
+    return [(idx2word[i], float(y_hat[i])) for i in top]
+
+
+def most_similar(word, top_k=3):
+    emb = W1 / (np.linalg.norm(W1, axis=1, keepdims=True) + 1e-9)
+    sims = emb @ emb[word2idx[word]]
+    best = np.argsort(sims)[::-1][1:top_k + 1]
+    return [(idx2word[i], float(sims[i])) for i in best]
+
+
+tests = [["the", "quick", "fox", "jumps"],
+         ["the", "lazy", "the", "barks"],
+         ["word", "capture", "meaning", "of"]]
+for ctx in tests:
+    print(f"Context {ctx} -> predicted: {predict(ctx)}")
+
+print("\nEmbedding of 'fox':")
+print(np.round(W1[word2idx['fox']], 3))
+
+print("\nMost similar words:")
+for w in ["fox", "language", "dog"]:
+    print(f"  {w}: {[(a, round(b, 3)) for a, b in most_similar(w)]}")
+
+print(f"\nFinal loss: {loss_history[-1]:.4f} (started at {loss_history[0]:.4f})")
+
+
+
+################ Practical 6 #################
+
+
+# -------------------------------
+# Object Detection using Transfer Learning (VGG16 + CIFAR-10)
+# -------------------------------
+
+import tensorflow as tf
+from tensorflow.keras.datasets import cifar10
+from tensorflow.keras.applications import VGG16
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Flatten, Dense
+from tensorflow.keras.utils import to_categorical
+
+
+# Step 1: Load CIFAR-10 dataset
+(itrain, ltrain), (itest, ltest) = cifar10.load_data()
+
+
+
+# Normalize images (0-255 → 0-1)
+itrain = itrain / 255.0
+itest = itest / 255.0
+
+# One-hot encode labels
+ltrain = to_categorical(ltrain)
+ltest = to_categorical(ltest)
+
+
+
+# Step 2: Load pre-trained VGG16 model (without top layers)
+basem = VGG16(weights='imagenet', include_top=False, input_shape=(32, 32, 3))
+
+
+
+
+
+# Step 3: Freeze pre-trained layers
+for layer in basem.layers:
+    layer.trainable = False
+
+
+
+# Step 4: Create new model on top of VGG16
+semodel = Sequential()
+semodel.add(basem)
+semodel.add(Flatten())
+semodel.add(Dense(256, activation='relu'))
+semodel.add(Dense(10, activation='softmax'))  # CIFAR-10 → 10 classes
+
+
+# Step 5: Compile the model
+semodel.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+
+
+
+# Step 6: Train the model
+history = semodel.fit(
+    itrain, ltrain,
+    epochs=10,
+    batch_size=32,
+    validation_data=(itest, ltest)
+)
+
+
+
+
+# Step 7: Evaluate model
+loss, acc = semodel.evaluate(itest, ltest)
+print("\nTest accuracy:", acc)
+
+
+
+
+                                                                                                                                                                                                                                           

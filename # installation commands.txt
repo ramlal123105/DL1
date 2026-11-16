@@ -1,0 +1,46 @@
+# installation commands 
+
+# STEP 1: Check Python 3.12
+py -3.12 --version
+
+# STEP 2: Upgrade pip
+py -3.12 -m pip install --upgrade pip
+
+# STEP 3: Install PyTorch, Torchvision and Torchaudio
+py -3.12 -m pip install torch torchvision torchaudio
+
+# STEP 4: Install TensorFlow and Keras
+py -3.12 -m pip install tensorflow keras
+
+# STEP 5: Install JupyterLab and Notebook
+py -3.12 -m pip install jupyterlab notebook
+
+# STEP 6: Install IPython Kernel
+py -3.12 -m pip install ipykernel
+
+# STEP 7: Register Deep Learning Kernel
+py -3.12 -m ipykernel install --user --name=deeplearning --display-name "Python 3.12 (Deep Learning)"
+
+2. Launch Jupyter Notebook
+py -3.12 -m notebook
+python -m notebook
+
+3. Test all installed libraries
+
+import torch
+import tensorflow as tf
+import keras
+
+print("PyTorch Version:", torch.__version__)
+print("PyTorch GPU Available:", torch.cuda.is_available())
+
+print("TensorFlow Version:", tf.__version__)
+print("TensorFlow GPU Available:",
+      len(tf.config.list_physical_devices('GPU')) > 0)
+
+print("Keras Version:", keras.__version__)
+
+# for ubuntu 
+
+1. ubuntu jupyter Lab opening
+jupyter lab
